@@ -1,10 +1,18 @@
-/* roboto-regular - latin */
+/* inter-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: "Roboto";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+  src: url("../fonts/inter-v13-latin-regular.woff2") format("woff2");
+}
+/* inter-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v13-latin-700.woff2") format("woff2");
 }
 html {
   -webkit-box-sizing: border-box;
@@ -46,7 +54,7 @@ p {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -57,4 +65,25 @@ img {
   width: 100%;
   height: auto;
   display: inline-block;
+}
+
+.site-header {
+  padding-top: 72px;
+  padding-bottom: 53px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #0d0d0d;
+}
+
+.site-header__logo {
+  text-align: center;
+}
+
+.site-header__logo img {
+  width: 126px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }/*# sourceMappingURL=main.css.map */

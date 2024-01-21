@@ -1,0 +1,17 @@
+.site-header {
+  padding-top: 72px;
+  padding-bottom: 53px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: $black;
+}
+.site-header__logo {
+  text-align: center;
+}
+.site-header__logo img {
+  width: 126px;
+  flex-shrink: 0;
+}
