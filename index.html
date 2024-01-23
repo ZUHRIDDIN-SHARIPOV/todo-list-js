@@ -17,12 +17,35 @@
       <div class="container site-header__container">
         <div class="site-header__block">
           <div class="site-header__logo">
-            <a href="#home">
+            <a href="#">
               <img src="./images/todo-logo.svg" alt="todo logo!" />
             </a>
           </div>
         </div>
-        <nav class="site-nav"></nav>
+        <nav class="site-nav">
+          <form class="site-nav__form">
+            <div class="site-nav__form-control">
+              <select name="input_type" class="site-nav__form-select">
+                <option value="default" class="site-nav__form-option">
+                  Default
+                </option>
+                <option value="search" class="site-nav__form-option">
+                  Search
+                </option>
+              </select>
+            </div>
+            <div class="site-nav__form-control">
+              <input
+                type="text"
+                name="todo"
+                autocomplete="off"
+                placeholder="Add a new task"
+                class="site-nav__form-input"
+                required />
+            </div>
+            <button type="submit" class="site-nav__form-btn">Add</button>
+          </form>
+        </nav>
       </div>
     </header>
     <main>

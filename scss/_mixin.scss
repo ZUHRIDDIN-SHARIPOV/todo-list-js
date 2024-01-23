@@ -1,0 +1,26 @@
+@mixin title {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  color: $light-blue;
+}
+@mixin text {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $gray;
+}
+@mixin btn {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 0.7px;
+  background: $blue;
+  color: $white;
+  cursor: pointer;
+}

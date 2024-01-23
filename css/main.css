@@ -54,7 +54,7 @@ p {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1300px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -69,7 +69,7 @@ img {
 
 .site-header {
   padding-top: 72px;
-  padding-bottom: 53px;
+  padding-bottom: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -82,8 +82,198 @@ img {
   text-align: center;
 }
 
+.site-header__logo a {
+  outline: none;
+}
+
 .site-header__logo img {
   width: 126px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+
+.site-nav {
+  position: fixed;
+  top: 172px;
+  left: 20px;
+  right: 20px;
+}
+
+.site-nav__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 70px;
+     -moz-column-gap: 70px;
+          column-gap: 70px;
+}
+
+.site-nav__form-select {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+  padding: 16px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  background: #262626;
+}
+
+.site-nav__form-option {
+  background: #0d0d0d;
+}
+
+.site-nav__form-control:nth-child(2) {
+  max-width: 700px;
+  width: 100%;
+}
+
+.site-nav__form-input {
+  width: 100%;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+  padding: 16px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background: #262626;
+}
+
+.site-nav__form-input::-webkit-input-placeholder {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+}
+
+.site-nav__form-input::-moz-placeholder {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+}
+
+.site-nav__form-input:-ms-input-placeholder {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+}
+
+.site-nav__form-input::-ms-input-placeholder {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+}
+
+.site-nav__form-input::placeholder {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+}
+
+.site-nav__form-btn {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 0.7px;
+  background: #1e6f9f;
+  color: #f2f2f2;
+  cursor: pointer;
+  outline: none;
+}
+
+.site-nav__form-btn::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../../images/plus-icon.svg");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1100px) {
+  .site-nav__form-control:nth-child(2) {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .site-nav__form-control:nth-child(2) {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 793px) {
+  .site-nav__form {
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+@media only screen and (max-width: 733px) {
+  .site-nav__form {
+    -webkit-column-gap: 35px;
+       -moz-column-gap: 35px;
+            column-gap: 35px;
+  }
+}
+@media only screen and (max-width: 723px) {
+  .site-nav__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
+  .site-nav__form-control:nth-child(1) {
+    max-width: 100%;
+    width: 100%;
+  }
+  .site-nav__form-select {
+    width: 100%;
+  }
+  .site-nav__form-control:nth-child(2) {
+    max-width: 100%;
+  }
+  .site-nav__form-btn {
+    max-width: 270px;
+    width: 100%;
+    font-size: 17px;
+  }
+  .site-nav__form-btn::after {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .site-nav__form-btn {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .site-nav__form-btn {
+    max-width: 170px;
+  }
 }/*# sourceMappingURL=main.css.map */

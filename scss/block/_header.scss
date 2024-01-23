@@ -1,6 +1,6 @@
 .site-header {
   padding-top: 72px;
-  padding-bottom: 53px;
+  padding-bottom: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,7 +11,118 @@
 .site-header__logo {
   text-align: center;
 }
+.site-header__logo a {
+  outline: none;
+}
 .site-header__logo img {
   width: 126px;
   flex-shrink: 0;
+}
+.site-nav {
+  position: fixed;
+  top: 172px;
+  left: 20px;
+  right: 20px;
+}
+.site-nav__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 70px;
+}
+.site-nav__form-select {
+  @include text;
+  padding: 16px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  background: $light-grey;
+}
+.site-nav__form-option {
+  background: $black;
+}
+.site-nav__form-control:nth-child(2) {
+  max-width: 700px;
+  width: 100%;
+}
+.site-nav__form-input {
+  width: 100%;
+  @include text;
+  padding: 16px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background: $light-grey;
+}
+.site-nav__form-input::placeholder {
+  @include text;
+}
+.site-nav__form-btn {
+  @include btn;
+  outline: none;
+}
+.site-nav__form-btn::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("../../images/plus-icon.svg");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1100px) {
+  .site-nav__form-control:nth-child(2) {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .site-nav__form-control:nth-child(2) {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 793px) {
+  .site-nav__form {
+    column-gap: 40px;
+  }
+}
+@media only screen and (max-width: 733px) {
+  .site-nav__form {
+    column-gap: 35px;
+  }
+}
+@media only screen and (max-width: 723px) {
+  .site-nav__form {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .site-nav__form-control:nth-child(1) {
+    max-width: 100%;
+    width: 100%;
+  }
+  .site-nav__form-select {
+    width: 100%;
+  }
+  .site-nav__form-control:nth-child(2) {
+    max-width: 100%;
+  }
+  .site-nav__form-btn {
+    max-width: 270px;
+    width: 100%;
+    font-size: 17px;
+  }
+  .site-nav__form-btn::after {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .site-nav__form-btn {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .site-nav__form-btn {
+    max-width: 170px;
+  }
 }
