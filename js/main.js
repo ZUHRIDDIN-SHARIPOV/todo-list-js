@@ -33,17 +33,17 @@ const buttons = {
 };
 buttons.click();
 
-input.oninput = () => {
-  const inputValue = input.value;
+select.onchange = () => {
   const selectedValue = select.value;
   const defaultValue = options[0].value;
   const searchValue = options[1].value;
 
   if (selectedValue === searchValue) {
+    input.placeholder = "Search for a task";
     addButton.classList.add("hidden");
     searchButton.classList.add("show");
-    console.log(inputValue);
   } else {
+    input.placeholder = "Add a new task";
     searchButton.classList.remove("show");
     addButton.classList.remove("hidden");
   }
