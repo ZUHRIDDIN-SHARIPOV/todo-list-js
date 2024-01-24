@@ -1,0 +1,41 @@
+.hero {
+  height: 100vh;
+  padding-top: 204px;
+  background: $grey;
+}
+.hero__list {
+  padding-top: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero__item {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.hero__item:first-child {
+  .hero__item-title {
+    @include title;
+  }
+}
+.hero__item:last-child {
+  .hero__item-title {
+    @include title;
+    color: $violet;
+  }
+}
+.hero__item-text {
+  @include title;
+  font-size: 12px;
+  padding: 2.5px 8px;
+  border-radius: 999px;
+  background: $count-color;
+  color: $light-gray;
+}
+
+@media only screen and (max-width: 715px) {
+  .hero__list {
+    padding-top: 260px;
+  }
+}

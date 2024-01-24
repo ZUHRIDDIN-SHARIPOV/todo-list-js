@@ -53,11 +53,14 @@
   border: none;
   border-radius: 8px;
   background: $light-grey;
+  color: $light-gray;
 }
 .site-nav__form-input::placeholder {
   @include text;
 }
-.site-nav__form-btn {
+.site-nav__form-btn,
+.site-nav__form-edit-btn,
+.site-nav__form-search-btn {
   @include btn;
   outline: none;
 }
@@ -71,28 +74,44 @@
   margin-left: 8px;
   display: inline-block;
 }
+.site-nav__form-btn {
+  max-width: 120px;
+  width: 100%;
+}
+.site-nav__form-edit-btn {
+  max-width: 120px;
+  width: 100%;
+  background: $dark-green;
+  display: none;
+}
+.site-nav__form-search-btn {
+  max-width: 120px;
+  width: 100%;
+  background: $violet;
+  display: none;
+}
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1075px) {
+  .site-nav__form-control:nth-child(2) {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 975px) {
   .site-nav__form-control:nth-child(2) {
     max-width: 500px;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 875px) {
   .site-nav__form-control:nth-child(2) {
     max-width: 400px;
   }
 }
-@media only screen and (max-width: 793px) {
+@media only screen and (max-width: 775px) {
   .site-nav__form {
     column-gap: 40px;
   }
 }
-@media only screen and (max-width: 733px) {
-  .site-nav__form {
-    column-gap: 35px;
-  }
-}
-@media only screen and (max-width: 723px) {
+@media only screen and (max-width: 715px) {
   .site-nav__form {
     flex-direction: column;
     row-gap: 30px;
@@ -107,7 +126,9 @@
   .site-nav__form-control:nth-child(2) {
     max-width: 100%;
   }
-  .site-nav__form-btn {
+  .site-nav__form-btn,
+  .site-nav__form-edit-btn,
+  .site-nav__form-search-btn {
     max-width: 270px;
     width: 100%;
     font-size: 17px;
@@ -117,12 +138,16 @@
   }
 }
 @media only screen and (max-width: 520px) {
-  .site-nav__form-btn {
+  .site-nav__form-btn,
+  .site-nav__form-edit-btn,
+  .site-nav__form-search-btn {
     max-width: 200px;
   }
 }
 @media only screen and (max-width: 340px) {
-  .site-nav__form-btn {
+  .site-nav__form-btn,
+  .site-nav__form-edit-btn,
+  .site-nav__form-search-btn {
     max-width: 170px;
   }
 }

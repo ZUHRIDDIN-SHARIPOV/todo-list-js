@@ -4,3 +4,10 @@
 @import "global";
 
 @import "block/block";
+
+.hidden {
+  display: none;
+}
+.show {
+  display: inline-block;
+}

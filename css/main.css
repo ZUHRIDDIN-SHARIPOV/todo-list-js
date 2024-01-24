@@ -54,7 +54,7 @@ p {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -148,6 +148,7 @@ img {
   border: none;
   border-radius: 8px;
   background: #262626;
+  color: #d9d9d9;
 }
 
 .site-nav__form-input::-webkit-input-placeholder {
@@ -190,7 +191,9 @@ img {
   color: #808080;
 }
 
-.site-nav__form-btn {
+.site-nav__form-btn,
+.site-nav__form-edit-btn,
+.site-nav__form-search-btn {
   font-family: "Inter";
   font-weight: 400;
   font-size: 15px;
@@ -216,31 +219,48 @@ img {
   display: inline-block;
 }
 
-@media only screen and (max-width: 1100px) {
+.site-nav__form-btn {
+  max-width: 120px;
+  width: 100%;
+}
+
+.site-nav__form-edit-btn {
+  max-width: 120px;
+  width: 100%;
+  background: #43845c;
+  display: none;
+}
+
+.site-nav__form-search-btn {
+  max-width: 120px;
+  width: 100%;
+  background: #8a2be2;
+  display: none;
+}
+
+@media only screen and (max-width: 1075px) {
+  .site-nav__form-control:nth-child(2) {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 975px) {
   .site-nav__form-control:nth-child(2) {
     max-width: 500px;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 875px) {
   .site-nav__form-control:nth-child(2) {
     max-width: 400px;
   }
 }
-@media only screen and (max-width: 793px) {
+@media only screen and (max-width: 775px) {
   .site-nav__form {
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
             column-gap: 40px;
   }
 }
-@media only screen and (max-width: 733px) {
-  .site-nav__form {
-    -webkit-column-gap: 35px;
-       -moz-column-gap: 35px;
-            column-gap: 35px;
-  }
-}
-@media only screen and (max-width: 723px) {
+@media only screen and (max-width: 715px) {
   .site-nav__form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -258,7 +278,9 @@ img {
   .site-nav__form-control:nth-child(2) {
     max-width: 100%;
   }
-  .site-nav__form-btn {
+  .site-nav__form-btn,
+  .site-nav__form-edit-btn,
+  .site-nav__form-search-btn {
     max-width: 270px;
     width: 100%;
     font-size: 17px;
@@ -268,12 +290,86 @@ img {
   }
 }
 @media only screen and (max-width: 520px) {
-  .site-nav__form-btn {
+  .site-nav__form-btn,
+  .site-nav__form-edit-btn,
+  .site-nav__form-search-btn {
     max-width: 200px;
   }
 }
 @media only screen and (max-width: 340px) {
-  .site-nav__form-btn {
+  .site-nav__form-btn,
+  .site-nav__form-edit-btn,
+  .site-nav__form-search-btn {
     max-width: 170px;
   }
+}
+.hero {
+  height: 100vh;
+  padding-top: 204px;
+  background: #191919;
+}
+
+.hero__list {
+  padding-top: 91px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.hero__item:first-child .hero__item-title {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 14px;
+  color: #4ea8de;
+}
+
+.hero__item:last-child .hero__item-title {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 14px;
+  color: #4ea8de;
+  color: #8a2be2;
+}
+
+.hero__item-text {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 14px;
+  color: #4ea8de;
+  font-size: 12px;
+  padding: 2.5px 8px;
+  border-radius: 999px;
+  background: #333333;
+  color: #d9d9d9;
+}
+
+@media only screen and (max-width: 715px) {
+  .hero__list {
+    padding-top: 260px;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.show {
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */
