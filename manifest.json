@@ -2,7 +2,7 @@
   "name": "Todo list Js",
   "icons": [
     {
-      "src": "./images/t.jpg",
+      "src": "./images/todo-icon.png",
       "type": "image/png",
       "sizes": "230x230"
     }
