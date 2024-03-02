@@ -33,6 +33,24 @@
   background: $count-color;
   color: $light-gray;
 }
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+  margin-top: 24px;
+  padding: 64px 0;
+}
+.hero__content-icon {
+  width: 56px;
+}
+.hero__content-text-one,
+.hero__content-text-two {
+  @include text;
+}
+.hero__content-text-one {
+  font-weight: 700;
+}
 
 @media only screen and (max-width: 715px) {
   .hero__list {

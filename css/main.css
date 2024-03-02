@@ -127,10 +127,6 @@ img {
   background: #262626;
 }
 
-.site-nav__form-option {
-  background: #0d0d0d;
-}
-
 .site-nav__form-control:nth-child(2) {
   max-width: 700px;
   width: 100%;
@@ -358,6 +354,39 @@ img {
   border-radius: 999px;
   background: #333333;
   color: #d9d9d9;
+}
+
+.hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 16px;
+  margin-top: 24px;
+  padding: 64px 0;
+}
+
+.hero__content-icon {
+  width: 56px;
+}
+
+.hero__content-text-one,
+.hero__content-text-two {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #808080;
+}
+
+.hero__content-text-one {
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 715px) {
