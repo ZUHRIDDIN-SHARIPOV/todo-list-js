@@ -93,10 +93,13 @@ img {
 }
 
 .site-nav {
+  padding: 0 20px;
   position: fixed;
   top: 172px;
-  left: 20px;
-  right: 20px;
+  left: 0px;
+  right: 0px;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
 }
 
 .site-nav__form {
@@ -558,6 +561,11 @@ img {
 @media only screen and (max-width: 715px) {
   .hero__list {
     padding-top: 260px;
+  }
+  .todo__item-btns {
+    -webkit-column-gap: 17px;
+       -moz-column-gap: 17px;
+            column-gap: 17px;
   }
 }
 .hidden {

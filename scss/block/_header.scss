@@ -19,10 +19,12 @@
   flex-shrink: 0;
 }
 .site-nav {
+  padding: 0 20px;
   position: fixed;
   top: 172px;
-  left: 20px;
-  right: 20px;
+  left: 0px;
+  right: 0px;
+  backdrop-filter: blur(7px);
 }
 .site-nav__form {
   display: flex;
