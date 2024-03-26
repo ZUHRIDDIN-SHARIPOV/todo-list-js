@@ -585,9 +585,6 @@ img {
     right: 20px;
     z-index: 1;
   }
-  .hero__item-clear:active {
-    background: transparent;
-  }
   .todo__item-btns {
     -webkit-column-gap: 17px;
        -moz-column-gap: 17px;
