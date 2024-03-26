@@ -19,6 +19,17 @@
     @include title;
   }
 }
+.hero__item-clear {
+  @include text;
+  width: 70px;
+  padding: 7px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  background: $light-grey;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
 .hero__item:last-child {
   .hero__item-title {
     @include title;
@@ -155,6 +166,14 @@
 @media only screen and (max-width: 715px) {
   .hero__list {
     padding-top: 260px;
+  }
+  .hero__item-clear {
+    width: 108px;
+    padding: 15px;
+    position: fixed;
+    top: 172px;
+    right: 20px;
+    z-index: 1;
   }
   .todo__item-btns {
     column-gap: 17px;

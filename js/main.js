@@ -2,15 +2,23 @@ const form = document.querySelector("form");
 const input = document.querySelector("input");
 const select = document.querySelector("select");
 const options = document.querySelectorAll("option");
+const clearButton = document.querySelector(".hero__item-clear");
 const addButton = document.querySelector(".site-nav__form-btn");
 const editButton = document.querySelector(".site-nav__form-edit-btn");
 const searchButton = document.querySelector(".site-nav__form-search-btn");
 
 const buttons = {
+  clear: clearButton,
   add: addButton,
   edit: editButton,
   search: searchButton,
   click: function () {
+    this.clear.onclick = () => {
+      this.clear.style.transform = "scale(0.9)";
+      setTimeout(() => {
+        this.clear.style.transform = "scale(1)";
+      }, 55);
+    };
     this.add.onclick = () => {
       this.add.style.transform = "scale(0.9)";
       setTimeout(() => {
