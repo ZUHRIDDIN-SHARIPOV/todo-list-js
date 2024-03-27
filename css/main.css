@@ -29,6 +29,7 @@ html {
 
 body {
   margin: 0;
+  background: #191919;
 }
 
 ul,
@@ -301,8 +302,6 @@ img {
 }
 .hero {
   padding-top: 204px;
-  padding-bottom: 170px;
-  background: #191919;
 }
 
 .hero__list {
@@ -408,7 +407,7 @@ img {
 }
 
 .todo__list {
-  margin: 24px 0;
+  margin: 24px 0 80px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,7 +415,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 15px;
+  row-gap: 17px;
 }
 
 .todo__item {
@@ -564,12 +563,12 @@ img {
 }
 
 .todo__item-edit {
-  width: 25px;
+  width: 23px;
   cursor: pointer;
 }
 
 .todo__item-delete {
-  width: 23px;
+  width: 20px;
   cursor: pointer;
 }
 
