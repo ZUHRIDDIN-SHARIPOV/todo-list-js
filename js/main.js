@@ -16,12 +16,12 @@ form.addEventListener("submit", addItem);
 
 function addItem(e) {
   e.preventDefault();
-  const selectedValue = select.value;
-  const searchValue = options[1].value;
+  const selected_value = select.value;
+  const option_value_search = options[1].value;
   const inputValue = input.value;
 
-  switch (selectedValue) {
-    case searchValue:
+  switch (selected_value) {
+    case option_value_search:
       break;
 
     default:
@@ -36,6 +36,7 @@ function addItem(e) {
       } else if (task.trim() && editButtonClick) {
         editLocalStorage(editId, task);
         setBackToDefault();
+        addButton.classList.remove("hidden");
         todoList.innerHTML = "";
         setupItems();
       }
@@ -52,22 +53,24 @@ function createTask(id, task) {
   attr.value = id;
   todoItem.setAttributeNode(attr);
 
-  todoItem.innerHTML = `<div class="todo__item-selection">
+  todoItem.innerHTML = `<div class="todo__item-block">
+<div class="todo__item-selection">
   <input type="checkbox" />
   <label></label>
 </div>
 <p class="todo__item-text">${task}</p>
+</div>
 <div class="todo__item-btns">
-  <div class="todo__item-edit">
-    <img
-      src="./images/edit-icon.svg"
-      alt="edit button icon!" />
-  </div>
-  <div class="todo__item-delete">
-    <img
-      src="./images/delete-icon.svg"
-      alt="delete button icon!" />
-  </div>
+<div class="todo__item-edit">
+  <img
+    src="./images/edit-icon.svg"
+    alt="edit button icon!" />
+</div>
+<div class="todo__item-delete">
+  <img
+    src="./images/delete-icon.svg"
+    alt="delete button icon!" />
+</div>
 </div>`;
   todoList.appendChild(todoItem);
 
@@ -95,8 +98,8 @@ function getLocalStorage() {
 
 function setBackToDefault() {
   input.value = "";
-  addButton.style.display = "inline-block";
-  editButton.style.display = "none";
+  addButton.classList.remove("show");
+  editButton.classList.remove("show");
   heroContent.style.display = "none";
   editButtonClick = false;
   editId = "";
@@ -120,6 +123,7 @@ function setupItems() {
 function deleteItem(e) {
   const todoItem = e.target.closest(".todo__item");
   const id = Number(todoItem.dataset.id);
+
   todoList.removeChild(todoItem);
   removeFromLocalStorage(id);
 }
@@ -149,8 +153,8 @@ function editItem(e) {
   });
 
   input.value = items.task;
-  addButton.style.display = "none";
-  editButton.style.display = "inline-block";
+  addButton.classList.add("hidden");
+  editButton.classList.add("show");
   editButtonClick = true;
   editId = id;
 }
@@ -209,14 +213,17 @@ const buttons = {
 buttons.click();
 
 select.onchange = () => {
-  const selectedValue = select.value;
-  const searchValue = options[1].value;
+  const selected_value = select.value;
+  const option_value_search = options[1].value;
 
-  switch (selectedValue) {
-    case searchValue:
+  switch (selected_value) {
+    case option_value_search:
+      input.value = "";
       input.placeholder = "Search for a task";
       addButton.classList.add("hidden");
+      editButton.classList.remove("show");
       searchButton.classList.add("show");
+      editId = "";
 
       break;
 

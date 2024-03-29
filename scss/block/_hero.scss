@@ -20,7 +20,7 @@
 .hero__item-clear {
   @include text;
   width: 70px;
-  padding: 7px;
+  padding: 6px;
   outline: none;
   border: none;
   border-radius: 12px;
@@ -64,9 +64,10 @@
   margin: 24px 0 80px 0;
   display: flex;
   flex-direction: column;
-  row-gap: 17px;
+  row-gap: 20px;
 }
 .todo__item {
+  max-width: 100%;
   padding: 16px;
   border: 1px solid $count-color;
   border-radius: 8px;
@@ -74,6 +75,14 @@
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
   display: flex;
   justify-content: space-between;
+  column-gap: 12px;
+  &:hover {
+    background: $count-color;
+    transition: 0.3s;
+  }
+}
+.todo__item-block {
+  display: flex;
   column-gap: 12px;
 }
 .todo__item-selection {
@@ -150,7 +159,7 @@
 .todo__item-btns {
   display: flex;
   align-items: center;
-  column-gap: 25px;
+  column-gap: 23px;
 }
 .todo__item-edit {
   width: 23px;
