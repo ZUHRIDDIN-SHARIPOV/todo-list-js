@@ -67,7 +67,6 @@
   row-gap: 20px;
 }
 .todo__item {
-  max-width: 100%;
   padding: 16px;
   border: 1px solid $count-color;
   border-radius: 8px;
@@ -82,6 +81,7 @@
   }
 }
 .todo__item-block {
+  max-width: 900px;
   display: flex;
   column-gap: 12px;
 }

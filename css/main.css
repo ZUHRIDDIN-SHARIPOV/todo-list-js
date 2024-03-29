@@ -419,7 +419,6 @@ img {
 }
 
 .todo__item {
-  max-width: 100%;
   padding: 16px;
   border: 1px solid #333333;
   border-radius: 8px;
@@ -443,6 +442,7 @@ img {
 }
 
 .todo__item-block {
+  max-width: 900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
